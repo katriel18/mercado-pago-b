@@ -30,7 +30,7 @@ public class PayController {
 	}
 
 	@PostMapping()
-	public Preference guardarUsuario(@RequestBody Item item) {
+	public String guardarUsuario(@RequestBody Item item) {
 
 		Preference newPreference = null;
 
@@ -81,7 +81,7 @@ public class PayController {
 			System.out.println("Error en  Guardado de la referencia!");
 		}
 
-		return (Preference) newPreference;
+		return newPreference.getInitPoint();
 
 		// return this.usuarioService.guardarUsuario(usuario);
 	}
