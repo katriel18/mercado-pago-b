@@ -81,7 +81,7 @@ public class PayController {
 			System.out.println("Error en  Guardado de la referencia!");
 		}
 
-		return newPreference;
+		return (Preference) newPreference;
 
 		// return this.usuarioService.guardarUsuario(usuario);
 	}
